@@ -21,7 +21,11 @@ def load_library(path)
     emoticon_array.each do [emoticon]
       new_hash["get_meaning"] = emoticon[1]
       new_hash["get_emoticon"] = emoticon[0]
+      new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
+    end
+    new_hash["get_meaning"][emoticon[1]] = meaning
   end
+  new_hash
 end
 
 def get_japanese_emoticon
