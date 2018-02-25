@@ -22,8 +22,8 @@ def load_library(path)
       new_hash["get_meaning"] = emoticon[1]
       new_hash["get_emoticon"] = emoticon[0]
       new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
+      new_hash["get_meaning"][emoticon[1]] = meaning
     end
-    new_hash["get_meaning"][emoticon[1]] = meaning
   end
   new_hash
 end
