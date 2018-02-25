@@ -14,12 +14,13 @@ require "pry"
 
 def load_library(path)
   emoticons = YAML.load_file(path)
-  # binding.pry
-  emoticons.each_with_object({}) |(meaning, emoticon_array), new_hash|
-    # binding.pry
-    new_hash["get_meaning"] = {}
-    new_hash["get_emoticon"] = {}
-    binding.pry
+  new_hash = {}
+  new_hash["get_meaning"] = {}
+  new_hash["get_emoticon"] = {}
+  emoticons.each do |meaning, emoticon_array|
+    emoticon_array.each do [emoticon]
+      new_hash["get_meaning"] = emoticon[1]
+      new_hash["get_emoticon"] = emoticon[0]
   end
 end
 
