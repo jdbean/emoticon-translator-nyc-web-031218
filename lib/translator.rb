@@ -16,9 +16,10 @@ def load_library(path)
   emoticons = YAML.load_file(path)
   binding.pry
   emoticons.each_with_object |(meaning, emoticon_array), new_hash|
-  new_hash[get_meaning] = {}
-  new_hash[get_emoticon] = {}
-  binding.pry
+    new_hash[get_meaning] = {}
+    new_hash[get_emoticon] = {}
+    binding.pry
+  end
 end
 
 def get_japanese_emoticon
