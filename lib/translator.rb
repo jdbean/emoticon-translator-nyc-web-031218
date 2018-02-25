@@ -23,7 +23,7 @@ def load_library(path)
       new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
     end
   end
-  binding.pry
+  # binding.pry
   new_hash
 end
 
