@@ -18,10 +18,8 @@ def load_library(path)
   new_hash["get_meaning"] = {}
   new_hash["get_emoticon"] = {}
   emoticons.each do |meaning, emoticon_array|
-    emoticon_array.each do |emoticon|
-      new_hash["get_meaning"][emoticon[1]] = meaning
-      new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
-    end
+    new_hash["get_meaning"][emoticon_array[1]] = meaning
+    new_hash["get_emoticon"][emoticon_array[0]] = emoticon_array[1]
   end
   binding.pry
   new_hash
