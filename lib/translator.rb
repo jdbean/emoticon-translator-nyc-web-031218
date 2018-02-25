@@ -21,12 +21,13 @@ def load_library(path)
     new_hash["get_meaning"][emoticon_array[1]] = meaning
     new_hash["get_emoticon"][emoticon_array[0]] = emoticon_array[1]
   end
-  binding.pry
+  # binding.pry
   new_hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(path, emoticon)
+  data_hash = load_library(path)
+  data_hash["get_emoticon"][emoticon]
 end
 
 def get_english_meaning
