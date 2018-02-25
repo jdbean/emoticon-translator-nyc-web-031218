@@ -25,6 +25,7 @@ def load_library(path)
       new_hash["get_meaning"][emoticon[1]] = meaning
     end
   end
+  binding.pry
   new_hash
 end
 
