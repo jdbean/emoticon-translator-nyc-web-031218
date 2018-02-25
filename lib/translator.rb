@@ -5,9 +5,9 @@ require "pry"
 #   accepts one argument, the file path
 #   return value
 #     returns a hash
-#     has two keys, 'get_meaning' and 'get_emoticon' 
-#     the keys 'get_meaning' and 'get_emoticon' point to inner hashes 
-#     the keys inside the 'get_meaning' hash are the Japanese emoticons 
+#     has two keys, 'get_meaning' and 'get_emoticon'
+#     the keys 'get_meaning' and 'get_emoticon' point to inner hashes
+#     the keys inside the 'get_meaning' hash are the Japanese emoticons
 #     the emoticon keys inside the 'get_meaning' hash point to their meanings
 #     the keys inside the 'get_emoticon' hash are the English emoticons
 #     the emoticon keys inside the 'get_emoticon' hash point to their Japanese equivalents
@@ -15,7 +15,7 @@ require "pry"
 def load_library(path)
   emoticons = YAML.load_file(path)
   binding.pry
-  emoticons.each_with_object |(meaning, emoticon_array), new_hash
+  emoticons.each_with_object |(meaning, emoticon_array), new_hash|
   new_hash[get_meaning] = {}
   new_hash[get_emoticon] = {}
   binding.pry
