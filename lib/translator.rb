@@ -16,8 +16,8 @@ def load_library(path)
   emoticons = YAML.load_file(path)
   # binding.pry
   emoticons.each_with_object do |(meaning, emoticon_array), new_hash|
-    new_hash[get_meaning] = {}
-    new_hash[get_emoticon] = {}
+    new_hash["get_meaning"] = {}
+    new_hash["get_emoticon"] = {}
     binding.pry
   end
 end
